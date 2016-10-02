@@ -1,0 +1,10 @@
+//This file name create will be same as create method in posts_controller.erb, as we have place format.js
+
+$("#mynewpost").modal('hide');
+$(".post_title").val('');
+$(".post_content").val('');
+
+$("#container_posts").prepend('<%= j render @post %>');
+$("#post_<%= @post.id %>").hide().fadeIn(1000);
+
+
